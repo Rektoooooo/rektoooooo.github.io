@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fish Pencilcase (Blue)</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="fishblackstyle.css" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+  </head>
+
+  <body>
+    <div class="all">
+    <a href="store.html" class="btn btn-primary shop-item-button backbutton" type="button">BACK TO STORE</a>
+    <div style="margin-right: 15%; margin: 10%;">
+    <main class="container">
+
+      <div style="margin-right: 5%;" class="left-column">
+        <div class="img-magnifier-container">
+        <img class="noselect" style="z-index: -1;" id="myimage" src="fishblue.png" alt="">
+        </div>
+      
+      </div>
+
+
+      <div class="right-column">
+
+        <div class="product-description">
+          <span>Pencilcase</span>
+          <h1>Fish Pencilcase (Blue)</h1>
+          <div class="textdown">
+          <p>1PC Creative Fish Shape Pencil Case Kawaii Korea Style Cloth Pencils Bags School Supplies Stationery Hot Pen Box Gift</p>
+          <span style="font-size: 60px;" class="product-price">$14.99</span>
+        </div>
+        </div>
+       
+
+  
+        </div>
+
+         
+        </div>
+      </div>
+    </main>
+    <div class="paypal">
+      <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal',
+            
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"amount":{"currency_code":"USD","value":14.99}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+              
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+              
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
+  </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="fishblackscript.js" charset="utf-8"></script>
+    <script>
+      /* Initiate Magnify Function
+      with the id of the image, and the strength of the magnifier glass:*/
+      magnify("myimage", 2);
+      </script>
+      </div>
+  </body>
+</html>
