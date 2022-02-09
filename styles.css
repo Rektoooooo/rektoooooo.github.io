@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
-@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 
 @font-face {
-    font-family: "Booter - Zero Zero";
-    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
-         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
-    font-weight: normal;
+    font-family: 'Inter';
+    src: url('Inter-SemiBold.woff2') format('woff2'),
+        url('Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
+
 
 
 html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    font-family: 'Trebuchet MS', sans-serif;
     height: 100%;
     width: 100%;
     margin-top: -5px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    
 }
 
 .nav ul {
@@ -67,12 +70,10 @@ html, body {
     font-size: 4em;
     font-weight: normal;
     color: white;
-    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .band-name-large {
     font-size: 8em;
-    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .content-section {
@@ -85,7 +86,6 @@ html, body {
     padding: 0 1.5em;
 }
 .section-header {
-    font-family: 'Trebuchet MS', sans-serif;
     font-weight: normal;
     color: #333;
     text-align: center;
@@ -349,7 +349,6 @@ color: white;
 padding: 0;
 position: fixed;
 margin-top: -50px;
-
 }
 .textfree {
     margin-left: 36%;
@@ -363,7 +362,7 @@ margin-top: -50px;
     border-width: 1px 0 0 0;
     width: 50px;
     margin-left: 46%;
-    margin-top: 200px;
+    margin-top: 130px;
 }
 
 
@@ -409,9 +408,60 @@ body {
     margin-top: 10px;
 }
 
-
-
-
-
-
 }
+
+
+
+.divinfo{
+    width: 100%;
+    height: 280px;
+    margin-top: 50px;
+    background-color: rgb(31, 31, 31);
+}
+.headingbottom {
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    padding: 0;
+    height: 20px;
+    float: left;
+}
+.underheading{
+    color: rgb(112, 112, 112);
+    margin-top: 10px;
+    height: 0;
+}
+.underhover:hover {
+    color: rgb(66, 66, 66);
+}
+a {
+    color: rgb(112, 112, 112);
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 20%;
+  }
+  .buttonsxd {
+      float: left;
+      margin-top: 20px;
+      margin-left: 40%;
+  }
