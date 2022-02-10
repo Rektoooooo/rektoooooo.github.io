@@ -72,9 +72,7 @@ html, body {
     color: white;
 }
 
-.band-name-large {
-    font-size: 8em;
-}
+
 
 .content-section {
     margin: 1em;
@@ -404,9 +402,24 @@ body {
     margin-left: 4%;
 }
 .textfree {
-    margin-left: 18%;
+    margin-left: 15%;
     margin-top: 10px;
 }
+.divtop {
+    width: 600px;
+}
+.buttonsxd {
+    margin-left: 20%;
+    float: left;
+}
+input[type=text] {
+
+    margin-right: 20px;
+}
+.butser {
+    margin-right: 100px;
+}
+
 
 }
 
