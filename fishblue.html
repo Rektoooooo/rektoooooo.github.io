@@ -46,63 +46,22 @@
       </div>
     </main>
     <div class="paypal">
-      <div id="smart-button-container">
-        <div style="text-align: center;">
-          <div id="paypal-button-container"></div>
-        </div>
-      </div>
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-    <script>
-      function initPayPalButton() {
-        paypal.Buttons({
-          style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-            
-          },
-  
-          createOrder: function(data, actions) {
-            return actions.order.create({
-              purchase_units: [{"amount":{"currency_code":"USD","value":14.99}}]
-            });
-          },
-  
-          onApprove: function(data, actions) {
-            return actions.order.capture().then(function(orderData) {
-              
-              // Full available details
-              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-  
-              // Show a success message within this page, e.g.
-              const element = document.getElementById('paypal-button-container');
-              element.innerHTML = '';
-              element.innerHTML = '<h3>Thank you for your payment!</h3>';
-  
-              // Or go to another URL:  actions.redirect('thank_you.html');
-              
-            });
-          },
-  
-          onError: function(err) {
-            console.log(err);
-          }
-        }).render('#paypal-button-container');
-      }
-      initPayPalButton();
-    </script>
-  </div>
-</div>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script src="fishblackscript.js" charset="utf-8"></script>
-    <script>
-      /* Initiate Magnify Function
-      with the id of the image, and the strength of the magnifier glass:*/
-      magnify("myimage", 2);
-      </script>
+    
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="sales@ic-servis.com">
+        <input type="hidden" name="lc" value="US">
+        <input type="hidden" name="item_name" value="Fish Pencilcase (Blue)">
+        <input type="hidden" name="item_number" value="Blue">
+        <input type="hidden" name="amount" value="14.99">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="products">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="add" value="1">
+        <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" width="200px"  name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt=""  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
       </div>
   </body>
 </html>
