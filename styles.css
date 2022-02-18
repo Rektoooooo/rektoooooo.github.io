@@ -409,17 +409,35 @@ body {
     width: 600px;   
 }
 .buttonsxd {
-    margin-left: 20%;
     float: left;
 }
 input[type=text] {
-
-    margin-right: 20px;
+    margin-top: 50px;
+    margin-right: 0px;
+    position: fixed;
 }
 .butser {
     margin-right: 100px;
 }
-
+.mobilemargin {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.underhoverm {
+    margin-left: 50px;
+}
+.divinfo {
+    margin-left: 0;
+}
+.hide {
+    display: none;
+}
+.main-nav li {
+    padding: 0%;
+}
+.nav ul {
+    margin-right: 100px;
+}
 
 }
 
